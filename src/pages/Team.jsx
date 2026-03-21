@@ -4,8 +4,6 @@ import Footer from "../components/Footer";
 import { team, consultants } from "../data/company";
 
 const Team = () => {
-  
-
   return (
     <>
       <Navbar />
@@ -35,8 +33,8 @@ const Team = () => {
                     alt={member.name}
                     className="w-40 h-40 rounded-full mx-auto mb-4 object-cover border-4 border-green-100"
                   />
-                  <h3 className="text-2xl font-bold text-green-800">{member.name}</h3>
-                  <p className="text-green-600 font-semibold">{member.role}</p>
+                  <h3 className="text-2xl font-bold text-green-800 mb-2">{member.name}</h3>
+                  <p className="text-green-600 font-semibold text-lg mb-4">{member.role}</p>
                 </div>
                 <p className="text-gray-700 leading-relaxed text-center">
                   {member.bio}
@@ -110,10 +108,10 @@ const Team = () => {
               Our Shared Vision
             </h2>
             <p className="text-lg text-gray-700 leading-relaxed">
-              Kenneth and Raji share a common vision of transforming Nigeria's poultry industry
-              through sustainable, responsible farming practices. Their partnership combines
-              agricultural expertise with business acumen to create a farm that prioritizes
-              quality, welfare, and community impact.
+              Kenneth Geoffrey and our expert consultant team share a common vision of transforming
+              Nigeria's poultry industry through sustainable, responsible farming practices. Our
+              collaboration combines agricultural expertise with business acumen and veterinary excellence
+              to create a farm that prioritizes quality, animal welfare, and community impact.
             </p>
           </div>
         </section>

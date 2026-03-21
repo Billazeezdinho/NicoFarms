@@ -14,7 +14,7 @@ function Home() {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setPlus((prev) => (prev === 0 ? 1 : 0))
+      setPlus((prev) => (prev === 0 ? 1 : 0));
     }, 5000);
     return () => clearInterval(interval);
   }, []);
@@ -230,17 +230,66 @@ function Home() {
             <button className="learn-butt">Learn more</button>
           </div>
           <div className="con-img">
-            <div className="about-layout"></div>
             <img src={img[plus]} alt="" />
-            <div className="carousel-controls">
-              <button onClick={() => setPlus(0)}>.</button>
-              <button onClick={() => setPlus(1)}>.</button>
-            </div>
+            <div className="about-layout"></div>
+          </div>
+          <div className="carousel-controls">
+            <button
+              onClick={() => setPlus(0)}
+              style={{ background: plus === 0 ? "#fda304" : "gray" }}
+            >
+              .
+            </button>
+            <button
+              onClick={() => setPlus(1)}
+              style={{ background: plus === 1 ? "#fda304" : "gray" }}
+            >
+              .
+            </button>
           </div>
         </div>
       </div>
 
-      <Footer />
+      <section className="products-section">
+        <h2>Our Products</h2>
+
+        <div className="products-container">
+          <div className="product-card">
+            <img src="src/assets/images/About-2.jpg" alt="Eggs" />
+            <h3>Fresh Eggs</h3>
+            <p>
+              Our fresh eggs are produced daily under hygienic conditions,
+              ensuring high nutritional value and great taste of both households
+              and commercial use.
+            </p>
+            <button>View Product</button>
+          </div>
+
+          <div className="product-card">
+            <img src="src/assets/images/broiler.jpg" alt="Broilers" />
+            <h3>Broilers</h3>
+            <p>
+              We raise healthy broiler chickens with proper feeding and care,
+              providing high-quality meat that meets the needs of homes,
+              restaurants, and businesses
+            </p>
+            <button>View Product</button>
+          </div>
+
+          <div className="product-card">
+            <img src="src/assets/images/layers.jpg" alt="Layers" />
+            <h3>Layers</h3>
+            <p>
+              Our layers are carefully managed to ensure consistent and
+              efficient egg production, giving you a reliable supply of quality
+              eggs at all times.
+            </p>
+            <button>View Product</button>
+          </div>
+        </div>
+      </section>
+
+      {/* <Footer /> */}
     </>
   );
 }
