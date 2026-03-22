@@ -1,8 +1,8 @@
 // Import team member images
-import ceoImage from "../assets/images/ceo.jpeg";
-import consultantImage from "../assets/images/consultant.jpeg";
-import mdImage from "../assets/images/md.jpeg";
-import legalImage from "../assets/images/legal.jpeg";
+import ceoImage from "/IMG/ceo.jpeg";
+import consultantImage from "/IMG/consultant.jpeg";
+import mdImage from "/IMG/md.jpeg";
+import legalImage from "/IMG/legal.jpeg";
 
 export const companyInfo = {
   name: "Nico Farms",

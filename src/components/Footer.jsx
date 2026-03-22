@@ -1,4 +1,4 @@
-import logo from "../assets/images/NicoFarmLogo.jpg";
+import logo from "/IMG/NicoFarmLogo.jpg";
 import { Link } from "react-router-dom";
 
 function Footer() {

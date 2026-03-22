@@ -179,7 +179,7 @@ const Navbar = () => {
           <p>PRODUCTS</p>
         </div>
         <div className="logo-container">
-          <img src="src/assets/images/NicoFarmLogo.jpg" alt="" />
+          <img src="/IMG/NicoFarmLogo.jpg" alt="" />
         </div>
         <div className="last-con">
           <p>SUSTAINABILITY</p>
