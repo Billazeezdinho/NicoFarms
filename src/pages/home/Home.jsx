@@ -10,7 +10,7 @@ import { useEffect, useState } from "react";
 function Home() {
   const [plus, setPlus] = useState(0);
 
-  const img = ["src/assets/images/About.jpg", "src/assets/images/About-2.jpg"];
+  const img = ["/IMG/About.jpg", "/IMG/About-2.jpg"];
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -255,7 +255,7 @@ function Home() {
 
         <div className="products-container">
           <div className="product-card">
-            <img src="src/assets/images/About-2.jpg" alt="Eggs" />
+            <img src="/IMG/About-2.jpg" alt="Eggs" />
             <h3>Fresh Eggs</h3>
             <p>
               Our fresh eggs are produced daily under hygienic conditions,
@@ -266,7 +266,7 @@ function Home() {
           </div>
 
           <div className="product-card">
-            <img src="src/assets/images/broiler.jpg" alt="Broilers" />
+            <img src="/IMG/broiler.jpg" alt="Broilers" />
             <h3>Broilers</h3>
             <p>
               We raise healthy broiler chickens with proper feeding and care,
@@ -277,7 +277,7 @@ function Home() {
           </div>
 
           <div className="product-card">
-            <img src="src/assets/images/layers.jpg" alt="Layers" />
+            <img src="/IMG/layers.jpg" alt="Layers" />
             <h3>Layers</h3>
             <p>
               Our layers are carefully managed to ensure consistent and
