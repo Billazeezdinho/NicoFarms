@@ -6,6 +6,7 @@ import Footer from "../../components/Footer";
 // import { Link } from "react-router-dom";
 import "./home.css";
 import { useEffect, useState } from "react";
+import { IoIosArrowUp } from "react-icons/io";
 
 function Home() {
   const [plus, setPlus] = useState(0);
@@ -18,6 +19,33 @@ function Home() {
     }, 5000);
     return () => clearInterval(interval);
   }, []);
+
+  const accordion = [
+    {
+      title: "High Quality Poultry Products",
+      content: "Fresh, healthy, and carefully handled to maintain top quality.",
+    },
+    {
+      title: "Responsible Farming Practices",
+      content:
+        "Sustainability raised with care for animal welfare and the environment.",
+    },
+    {
+      title: "Healthy Birds & Nutritious Eggs",
+      content: "Packed with nutrients for your family's health and wellness.",
+    },
+    {
+      title: "Trusted by Local Businesses",
+      content:
+        "Supplied to restaurants, supermarkets, and households across the region.",
+    },
+  ];
+
+  const [drop, setDrop] = useState(null)
+
+  const dropDown = (index) => {
+    setDrop((prev) => (prev === index ? null : index));
+  };
   return (
     <>
       <Navbar />
@@ -287,6 +315,22 @@ function Home() {
             <button>View Product</button>
           </div>
         </div>
+      </section>
+
+      <section className="why-choose">
+        <h2>Why Choose Us</h2>
+        {accordion.map((value, index) => (
+          <div className="accord" key={index}>
+            <h3 onClick={()=> dropDown(index)}>
+              {value.title}
+              <span>
+                <IoIosArrowUp style={{transform: drop === index ? "rotate(180deg)" : "rotate(0deg)", transition: "0.3s"}}/>
+              </span>
+            </h3>
+            { drop === index && <p>{value.content}</p> }
+            
+          </div>
+        ))}
       </section>
 
       {/* <Footer /> */}

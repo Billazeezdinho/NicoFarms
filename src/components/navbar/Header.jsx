@@ -174,12 +174,12 @@ const Navbar = () => {
         </div>
       </div>
       <div className="head-container">
+        <div className="logo-container">
+          <img src="/IMG/NicoFarmLogo.jpg" alt="" />
+        </div>
         <div className="first-con">
           <p>ABOUT</p>
           <p>PRODUCTS</p>
-        </div>
-        <div className="logo-container">
-          <img src="/IMG/NicoFarmLogo.jpg" alt="" />
         </div>
         <div className="last-con">
           <p>SUSTAINABILITY</p>
