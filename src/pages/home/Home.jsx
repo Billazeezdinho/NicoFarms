@@ -1,6 +1,6 @@
 import Navbar from "../../components/navbar/Header";
 import Hero from "../../components/hero/Hero";
-import Footer from "../../components/Footer";
+import Footer from "../../components/footer/Footer"
 // import ProductCard from "../components/ProductCard";
 // import SectionTitle from "../components/SectionTitle";
 // import { Link } from "react-router-dom";
@@ -334,7 +334,7 @@ function Home() {
         ))}
       </section>
 
-      {/* <Footer /> */}
+      <Footer />
     </>
   );
 }
