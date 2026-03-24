@@ -3,6 +3,7 @@ import ceoImage from "/IMG/ceo.jpeg";
 import consultantImage from "/IMG/consultant.jpeg";
 import mdImage from "/IMG/md.jpeg";
 import legalImage from "/IMG/legal.jpeg";
+import financeImage from "/IMG/finance.jpeg";
 
 export const companyInfo = {
   name: "Nico Farms",
@@ -138,5 +139,27 @@ With a deep understanding of business operations and a commitment to excellence,
     ],
     about: `Blessing Okonkwo serves as Legal and Compliance Advisor for Nico AgriFarms Limited, ensuring all operations align with Nigerian laws and international standards. His legal expertise protects the company's interests while facilitating compliance with agricultural, environmental, and business regulations. He provides strategic legal counsel on contracts, partnerships, and corporate governance matters.`,
     image: legalImage,
+  },
+  {
+    name: "Chinaza Aroh-Anyika, BA LLB LLM",
+    role: "Finance and Accounts Officer",
+    company: "Nico AgriFarms Limited",
+    bio: "Chinaza Aroh-Anyika is a finance and accounting professional with over five years of experience supporting businesses across consulting, healthcare, hospitality, logistics, and agriculture.",
+    specialties: [
+      "Structured Accounting Systems",
+      "Internal Controls",
+      "Financial Compliance",
+      "Risk Exposure Reduction",
+      "Data-Driven Decision Making",
+      "Financial Process Development",
+    ],
+    about: `Chinaza Aroh-Anyika is a finance and accounting professional with over five years of experience supporting businesses across consulting, healthcare, hospitality, logistics, and agriculture.
+
+She specialises in building structured accounting systems, strengthening internal controls, and ensuring financial compliance for growing businesses. Her work is focused on improving financial clarity, reducing risk exposure, and enabling business owners to make informed, data-driven decisions.
+
+Chinaza holds a Second Class Upper degree from Imo State University and is currently a student member of the Institute of Chartered Accountants of Nigeria (ICAN), reflecting her strong commitment to continuous professional development and high ethical standards.
+
+With a keen eye for detail and a practical approach to financial management, she works closely with Nico AgriFarms to develop efficient and reliable financial processes that support long-term growth and operational stability.`,
+    image: financeImage,
   },
 ];
