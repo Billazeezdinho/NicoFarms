@@ -159,9 +159,16 @@ import { RxHamburgerMenu } from "react-icons/rx";
 import "./header.css";
 import { IoIosSearch } from "react-icons/io";
 import { useEffect, useState } from "react";
+import { useLocation, useNavigate } from "react-router-dom";
 
 const Navbar = () => {
   const [showSide, setShowSide] = useState(false);
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  useEffect(() => {
+      setShowSide(false)
+  }, [location])
 
   useEffect(() => {
     if (showSide) {
@@ -179,22 +186,22 @@ const Navbar = () => {
         </div>
         <div className="head-right">
           <p>WHERE TO BUY</p>
-          <p>CORPORATE</p>
-          <p>WORK WITH US</p>
-          <p>OUR VALUES</p>
+          <p onClick={() => navigate("/team")}>CORPORATE</p>
+          <p onClick={() => navigate("/investors")}>WORK WITH US</p>
+          <p onClick={() => navigate("/values")}>OUR VALUES</p>
         </div>
       </div>
       <div className="head-container">
-        <div className="logo-container">
+        <div className="logo-container" onClick={() => navigate("/")}>
           <img src="/IMG/Nico-LOgo.png" alt="" />
         </div>
         <div className="first-con">
-          <p>ABOUT</p>
-          <p>PRODUCTS</p>
+          <p onClick={() => navigate("/about")}>ABOUT</p>
+          <p onClick={() => navigate("/products")}>PRODUCTS</p>
         </div>
         <div className="last-con">
-          <p>SUSTAINABILITY</p>
-          <p>CONTACT</p>
+          <p onClick={() => navigate("/sustainability")}>SUSTAINABILITY</p>
+          <p onClick={() => navigate("/contact")}>CONTACT</p>
         </div>
         <span
           className={`burger ${showSide ? "active" : ""}`}
@@ -207,9 +214,10 @@ const Navbar = () => {
       </div>
       <div className={`sideBar ${showSide ? "active" : ""}`}>
         <div className="nav-items">
-          <p>Home</p>
-          <p>Farmers Markets & Events</p>
-          <p>About</p>
+          <p onClick={() => navigate("/about")}>ABOUT</p>
+          <p onClick={() => navigate("/products")}>PRODUCTS</p>
+          <p onClick={() => navigate("/sustainability")}>SUSTAINABILITY</p>
+          <p onClick={() => navigate("/contact")}>CONTACT</p>
         </div>
         <button>DONATE</button>
       </div>

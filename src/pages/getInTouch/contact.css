@@ -1,0 +1,162 @@
+/* PAGE */
+.contact {
+  background: linear-gradient(to bottom, #fefce8, #ffffff);
+  padding: 60px 20px;
+}
+
+/* HEADER */
+.contact-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.contact-header h1 {
+  font-size: 40px;
+  color: #1f4d2b;
+}
+
+.contact-header p {
+  color: #666;
+  margin-top: 10px;
+}
+
+/* LAYOUT */
+.contact-container {
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+}
+
+/* FORM */
+.contact-form-section {
+  background: #fff;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+}
+
+.contact-form-section h2 {
+  color: #1f4d2b;
+  margin-bottom: 20px;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.form-group label {
+  font-weight: 500;
+  margin-bottom: 5px;
+  display: block;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  outline: none;
+  transition: 0.3s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: #1f4d2b;
+  box-shadow: 0 0 0 2px rgba(31,77,43,0.1);
+}
+
+/* BUTTON */
+.contact-form button {
+  margin-top: 10px;
+  padding: 14px;
+  background: #1f4d2b;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.contact-form button:hover {
+  background: #16381f;
+}
+
+/* INFO */
+.contact-info h2 {
+  color: #1f4d2b;
+  margin-bottom: 20px;
+}
+
+.info-card {
+  background: #f0fdf4;
+  padding: 20px;
+  border-radius: 15px;
+  margin-bottom: 20px;
+}
+
+.info-card h3 {
+  color: #1f4d2b;
+  margin-bottom: 10px;
+}
+
+.info-card p,
+.info-card a {
+  color: #555;
+  text-decoration: none;
+}
+
+.info-card a:hover {
+  color: #fda304;
+}
+
+/* SERVICE AREAS */
+.service-areas {
+  margin-top: 60px;
+  background: #f9fafb;
+  padding: 50px;
+  border-radius: 20px;
+  text-align: center;
+}
+
+.service-areas h2 {
+  color: #1f4d2b;
+  margin-bottom: 10px;
+}
+
+.service-areas p {
+  color: #666;
+  margin-bottom: 30px;
+}
+
+.areas-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+}
+
+.area {
+  background: #fff;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .contact-container {
+    grid-template-columns: 1fr;
+  }
+
+  .areas-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-form-section {
+    padding: 25px;
+  }
+}

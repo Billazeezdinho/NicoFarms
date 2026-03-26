@@ -93,6 +93,7 @@ input::placeholder {
     height: 100%;
     margin-left: 10px;
     margin-bottom: 7px;
+    cursor: pointer;
 
     img {
       width: 100%;

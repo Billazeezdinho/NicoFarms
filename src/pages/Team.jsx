@@ -1,13 +1,8 @@
-import React from "react";
-import Navbar from "../components/navbar/Header";
-import Footer from "../components/Footer";
 import { team, consultants } from "../data/company";
 
 const Team = () => {
   return (
     <>
-      <Navbar />
-
       <main className="px-6 md:px-16 py-12">
         {/* HEADER */}
         <section className="text-center mb-12">
@@ -116,8 +111,6 @@ const Team = () => {
           </div>
         </section>
       </main>
-
-      <Footer />
     </>
   );
 };
