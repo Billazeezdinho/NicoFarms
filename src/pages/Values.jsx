@@ -1,7 +1,3 @@
-import React from "react";
-import Navbar from "../components/navbar/Header";
-import Footer from "../components/Footer";
-
 const Values = () => {
   const values = [
     {
@@ -38,7 +34,6 @@ const Values = () => {
 
   return (
     <>
-      <Navbar />
 
       <main className="px-6 md:px-16 py-12">
         {/* HEADER */}
@@ -86,8 +81,6 @@ const Values = () => {
           </div>
         </section>
       </main>
-
-      <Footer />
     </>
   );
 };

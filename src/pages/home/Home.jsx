@@ -48,7 +48,6 @@ function Home() {
   };
   return (
     <>
-      <Navbar />
 
       <Hero />
 
@@ -333,8 +332,6 @@ function Home() {
           </div>
         ))}
       </section>
-
-      <Footer />
     </>
   );
 }
