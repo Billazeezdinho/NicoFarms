@@ -73,10 +73,31 @@ export const team = [
   {
     name: "Kenneth Geoffrey",
     role: "Founder & Chief Executive Officer",
-    bio: "Kenneth Geoffrey founded Nico Farms in 2020 with a vision to create sustainable poultry farming operations. His leadership and commitment to quality have established Nico Farms as a trusted name in the industry. Kenneth works closely with his partner to ensure every aspect of the farm meets the highest standards of quality and animal welfare.",
+    company: "Nico AgriFarms Limited",
+    bio: "Kenneth Geoffrey is the Founder and Chief Executive Officer of Nico AgriFarms Limited, an agribusiness established in 2020 with a vision to deliver high-quality poultry products while prioritising animal welfare and sustainable farming.",
+    specialties: [
+      "Strategic Operational Leadership",
+      "Business Analytics & Data-Driven Decisions",
+      "Agribusiness Scalability",
+      "Startup Development",
+      "Financial Services Integration",
+      "Sustainable Farming Practices"
+    ],
+    about: `Kenneth Geoffrey is the Founder and Chief Executive Officer of Nico AgriFarms Limited, an agribusiness established in 2020 with a vision to deliver high-quality poultry products while prioritising animal welfare, operational excellence, and sustainable farming practices.
+
+An entrepreneur with a track record of building and supporting startups, Kenneth has been actively involved in the development of multiple ventures across agriculture, technology, and the creative industry. He is also the Co-Founder of Yulo Technology, a fintech-focused startup, and the Founder of Nightraven Entertainment, a production and talent management company dedicated to creating impactful and inspiring content.
+
+Kenneth holds a Master's degree in Business with Business Analytics from Northumbria University London, equipping him with strong data-driven decision-making capabilities. He also holds a Diploma and a Bachelor's degree in Business Administration from the University of Lagos (UNILAG).
+
+With a multidisciplinary approach to business, Kenneth combines strategic thinking, operational leadership, and analytical insight to build scalable and sustainable enterprises. His work is driven by a commitment to solving real economic challenges, particularly within agriculture and financial services, while creating value for communities and stakeholders.
+
+Under his leadership, Nico AgriFarms continues to grow as a structured and forward-thinking agribusiness, with a focus on quality, efficiency, and long-term impact.
+
+Kenneth is focused on building Nico AgriFarms into a scalable, investor-ready agribusiness that contributes meaningfully to Nigeria's food security and economic development.`,
     image: ceoImage,
   },
 ];
+
 
 // CONSULTANTS & SPECIALISTS
 

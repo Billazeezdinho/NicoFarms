@@ -1,117 +1,80 @@
+import React, { useState } from "react";
 import { team, consultants } from "../data/company";
+import "./team.css";
 
 const Team = () => {
+  const [selectedMember, setSelectedMember] = useState(null);
+  const allStaff = [...team, ...consultants];
+
   return (
-    <>
-      <main className="px-6 md:px-16 py-12">
-        {/* HEADER */}
-        <section className="text-center mb-12">
-          <h1 className="text-4xl font-bold text-green-800">Our Team</h1>
-          <p className="text-gray-600 mt-3">
-            Meet the people behind Nico Farms' success
-          </p>
-        </section>
+    <main className="nico-team-page">
+      <header className="nico-team-header">
+        <h1 className="nico-main-title">Our Expert Leadership</h1>
+        <div className="nico-title-underline"></div>
+      </header>
 
-        {/* TEAM MEMBERS */}
-        <section className="max-w-6xl mx-auto mb-16">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-green-800">Leadership Team</h2>
-            <div className="w-16 h-1 bg-green-600 rounded-full mx-auto mt-4"></div>
-          </div>
-
-          <div className="grid md:grid-cols-1 gap-12 max-w-2xl mx-auto">
-            {team.map((member, index) => (
-              <div key={index} className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300">
-                <div className="text-center mb-6">
-                  <img
-                    src={member.image}
-                    alt={member.name}
-                    className="w-40 h-40 rounded-full mx-auto mb-4 object-cover border-4 border-green-100"
-                  />
-                  <h3 className="text-2xl font-bold text-green-800 mb-2">{member.name}</h3>
-                  <p className="text-green-600 font-semibold text-lg mb-4">{member.role}</p>
-                </div>
-                <p className="text-gray-700 leading-relaxed text-center">
-                  {member.bio}
-                </p>
+      <section className="nico-members-stack">
+        {allStaff.map((member, index) => (
+          <div key={index} className="nico-premium-card">
+            <div className="nico-visual-frame">
+              <div className="nico-image-box">
+                <img src={member.image} alt={member.name} className="nico-member-img" />
               </div>
-            ))}
-          </div>
-        </section>
+              <div className="nico-orange-frame-accent"></div>
+            </div>
 
-        {/* CONSULTANTS & SPECIALISTS */}
-        <section className="max-w-6xl mx-auto mb-16">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-green-800">Consultants & Specialists</h2>
-            <div className="w-16 h-1 bg-green-600 rounded-full mx-auto mt-4"></div>
-          </div>
+            <div className="nico-content-box">
+              <span className="nico-role-badge">{member.role}</span>
+              <h2 className="nico-member-name">{member.name}</h2>
+              {member.company && <p className="nico-company-tag">{member.company}</p>}
 
-          {consultants.map((consultant, index) => (
-            <div key={index} className="bg-gradient-to-r from-green-50 to-blue-50 p-8 rounded-2xl shadow-lg mb-8">
-              <div className="grid md:grid-cols-3 gap-8 items-start">
-                {/* Profile Image */}
-                <div className="text-center">
-                  <img
-                    src={consultant.image}
-                    alt={consultant.name}
-                    className="w-40 h-40 rounded-full mx-auto mb-4 object-cover border-4 border-green-200 shadow-lg"
-                  />
-                  <h3 className="text-xl font-bold text-green-800 mb-2">{consultant.name}</h3>
-                  <p className="text-green-700 font-semibold mb-1">{consultant.role}</p>
-                  <p className="text-sm text-gray-600">
-                    <span className="font-semibold">Firm:</span> {consultant.company}
-                  </p>
-                </div>
+              <div className="nico-main-details">
+                <p className="nico-bio-text">{member.bio}</p>
 
-                {/* Bio & Specialties */}
-                <div className="md:col-span-2">
-                  <p className="text-gray-700 leading-relaxed mb-6">
-                    {consultant.bio}
-                  </p>
-
-                  <div>
-                    <h4 className="text-lg font-bold text-green-800 mb-3">
-                      Areas of Expertise:
-                    </h4>
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
-                      {consultant.specialties.map((specialty, idx) => (
-                        <div key={idx} className="flex items-center">
-                          <span className="text-green-600 font-bold mr-3">✓</span>
-                          <span className="text-gray-700">{specialty}</span>
-                        </div>
+                {member.specialties && (
+                  <div className="nico-spec-section">
+                    <h4>Core Expertise:</h4>
+                    <ul className="nico-spec-grid">
+                      {member.specialties.map((specialty, itemIndex) => (
+                        <li key={itemIndex}>{"\u2713"} {specialty}</li>
                       ))}
-                    </div>
+                    </ul>
                   </div>
-                </div>
+                )}
               </div>
 
-              {/* About Section */}
-              <div className="mt-8 pt-8 border-t-2 border-green-200">
-                <h4 className="text-lg font-bold text-green-800 mb-4">Professional Profile</h4>
-                <p className="text-gray-700 leading-relaxed whitespace-pre-line">
-                  {consultant.about}
-                </p>
+              <button className="nico-story-btn" onClick={() => setSelectedMember(member)}>
+                View Professional Journey
+              </button>
+            </div>
+          </div>
+        ))}
+      </section>
+
+      {selectedMember && (
+        <div className="nico-modal-overlay" onClick={() => setSelectedMember(null)}>
+          <div className="nico-modal-content" onClick={(event) => event.stopPropagation()}>
+            <button className="nico-close-modal" onClick={() => setSelectedMember(null)}>
+              &times;
+            </button>
+
+            <div className="nico-modal-media">
+              <img src={selectedMember.image} alt={selectedMember.name} className="nico-modal-image" />
+            </div>
+
+            <div className="nico-modal-details">
+              <span className="modal-label">The Story of</span>
+              <h2 className="modal-title">{selectedMember.name}</h2>
+              <p className="modal-role">{selectedMember.role}</p>
+              {selectedMember.company && <p className="modal-company">{selectedMember.company}</p>}
+              <div className="modal-scroll-area">
+                <p className="modal-about-text">{selectedMember.about || selectedMember.bio}</p>
               </div>
             </div>
-          ))}
-        </section>
-
-        {/* OUR COMMITMENT */}
-        <section className="mt-16 bg-green-50 p-8 rounded-lg">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-2xl font-bold text-green-800 mb-4">
-              Our Shared Vision
-            </h2>
-            <p className="text-lg text-gray-700 leading-relaxed">
-              Kenneth Geoffrey and our expert consultant team share a common vision of transforming
-              Nigeria's poultry industry through sustainable, responsible farming practices. Our
-              collaboration combines agricultural expertise with business acumen and veterinary excellence
-              to create a farm that prioritizes quality, animal welfare, and community impact.
-            </p>
           </div>
-        </section>
-      </main>
-    </>
+        </div>
+      )}
+    </main>
   );
 };
 

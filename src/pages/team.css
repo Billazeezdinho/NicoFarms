@@ -1,0 +1,320 @@
+:root {
+  --nico-green: #1a5d1a;
+  --nico-orange: #f97316;
+  --nico-white: #ffffff;
+  --nico-text: #374151;
+}
+
+.nico-team-page {
+  padding: 6rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  background: var(--nico-white);
+}
+
+.nico-team-header {
+  text-align: center;
+  margin-bottom: 7rem;
+}
+
+.nico-main-title {
+  font-size: 3.5rem;
+  color: var(--nico-green);
+  font-weight: 800;
+}
+
+.nico-title-underline {
+  width: 80px;
+  height: 5px;
+  background: var(--nico-orange);
+  margin: 0 auto;
+  border-radius: 10px;
+}
+
+.nico-members-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 8rem;
+}
+
+.nico-premium-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 5rem;
+  padding: 2rem;
+}
+
+.nico-visual-frame {
+  position: relative;
+  flex-shrink: 0;
+}
+
+.nico-image-box {
+  width: 380px;
+  height: 480px;
+  border-radius: 30px 120px 30px 30px;
+  overflow: hidden;
+  position: relative;
+  z-index: 2;
+  box-shadow: 0 30px 60px -12px rgba(0, 0, 0, 0.15);
+}
+
+.nico-member-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.nico-orange-frame-accent {
+  position: absolute;
+  top: -20px;
+  right: -20px;
+  width: 100%;
+  height: 100%;
+  border: 5px solid var(--nico-orange);
+  border-radius: 30px 120px 30px 30px;
+  z-index: 1;
+}
+
+.nico-content-box {
+  flex: 1;
+}
+
+.nico-role-badge {
+  background: var(--nico-orange);
+  color: white;
+  padding: 0.6rem 1.8rem;
+  border-radius: 50px;
+  font-weight: 700;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+}
+
+.nico-member-name {
+  font-size: 3rem;
+  color: var(--nico-green);
+  font-weight: 800;
+  margin: 1.5rem 0 0.5rem;
+}
+
+.nico-company-tag {
+  color: var(--nico-orange);
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+}
+
+.nico-bio-text {
+  line-height: 1.8;
+  color: var(--nico-text);
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+  white-space: pre-line;
+}
+
+.nico-spec-section h4 {
+  color: var(--nico-green);
+  margin-bottom: 1rem;
+  font-weight: 800;
+}
+
+.nico-spec-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.8rem;
+  list-style: none;
+  padding: 0;
+}
+
+.nico-spec-grid li {
+  color: var(--nico-text);
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+.nico-story-btn {
+  background: var(--nico-green);
+  color: white;
+  border: none;
+  padding: 1rem 2.5rem;
+  border-radius: 8px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.3s;
+  margin-top: 2rem;
+}
+
+.nico-story-btn:hover {
+  background: var(--nico-orange);
+  transform: translateY(-3px);
+}
+
+.nico-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(8px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  z-index: 9999;
+}
+
+.nico-modal-content {
+  width: min(1100px, 92vw);
+  height: min(760px, calc(100vh - 2rem));
+  border-radius: 24px;
+  position: relative;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 40% 60%;
+  background: #0f3118;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.35);
+}
+
+.nico-modal-media {
+  width: 100%;
+  height: 100%;
+  background: #14351f;
+  min-height: 0;
+}
+
+.nico-modal-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.nico-modal-details {
+  height: 100%;
+  padding: 2.5rem 2.2rem 2rem;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  overflow: hidden;
+}
+
+.nico-close-modal {
+  position: absolute;
+  top: 14px;
+  right: 18px;
+  font-size: 2.4rem;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.modal-label {
+  color: var(--nico-orange);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 800;
+}
+
+.modal-title {
+  font-size: 2.1rem;
+  margin: 0.6rem 0 0.5rem;
+}
+
+.modal-role {
+  font-size: 1rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.modal-company {
+  margin: 0.4rem 0 1rem;
+  color: #ffcf9c;
+  font-weight: 600;
+}
+
+.modal-scroll-area {
+  margin-top: 0.8rem;
+  overflow-y: auto;
+  flex: 1;
+  min-height: 0;
+  padding-right: 0.9rem;
+}
+
+.modal-about-text {
+  font-size: 1.02rem;
+  line-height: 1.8;
+  white-space: pre-line;
+  margin: 0;
+}
+
+.modal-scroll-area::-webkit-scrollbar {
+  width: 6px;
+}
+
+.modal-scroll-area::-webkit-scrollbar-thumb {
+  background: var(--nico-orange);
+  border-radius: 10px;
+}
+
+@media (max-width: 1024px) {
+  .nico-premium-card {
+    flex-direction: column;
+    text-align: center;
+    gap: 4rem;
+  }
+
+  .nico-visual-frame {
+    margin: 0 auto;
+  }
+
+  .nico-spec-grid {
+    grid-template-columns: 1fr;
+    text-align: left;
+  }
+
+  .nico-modal-content {
+    grid-template-columns: 1fr;
+    width: min(760px, 94vw);
+    height: min(860px, calc(100vh - 2rem));
+  }
+
+  .nico-modal-media {
+    height: 320px;
+  }
+
+  .nico-modal-details {
+    padding: 1.5rem 1.2rem 1.2rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .nico-team-page {
+    padding: 4rem 1rem;
+  }
+
+  .nico-main-title {
+    font-size: 2.2rem;
+  }
+
+  .nico-image-box {
+    width: 280px;
+    height: 360px;
+  }
+
+  .nico-member-name {
+    font-size: 2rem;
+  }
+
+  .nico-modal-media {
+    height: 230px;
+  }
+
+  .modal-title {
+    font-size: 1.7rem;
+  }
+
+  .modal-about-text {
+    font-size: 0.98rem;
+    line-height: 1.7;
+  }
+}
