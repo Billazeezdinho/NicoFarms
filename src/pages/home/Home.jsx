@@ -245,7 +245,7 @@ function Home() {
       </section> */}
 
       <div className="about-section">
-        <h1>About Nico Farms</h1>
+        <h1>About Nico Farmer</h1>
         <div className="con-text-img">
           <div className="con-text">
             <p>
