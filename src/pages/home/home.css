@@ -21,7 +21,7 @@
     height: 4px;
     background: #fda304;
     position: absolute;
-    right: 40%;
+    right: 4%;
     bottom: -20px;
   }
 
@@ -265,7 +265,7 @@
 
   /* ===== ABOUT SECTION ===== */
   .about-section {
-    width: 90%;
+    width: 89%;
     padding: 0px;
     margin-top: 50px;
     gap: 30px;
