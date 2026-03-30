@@ -1,12 +1,13 @@
 import Navbar from "../../components/navbar/Header";
 import Hero from "../../components/hero/Hero";
-import Footer from "../../components/footer/Footer"
+import Footer from "../../components/footer/Footer";
 // import ProductCard from "../components/ProductCard";
 // import SectionTitle from "../components/SectionTitle";
 // import { Link } from "react-router-dom";
 import "./home.css";
 import { useEffect, useState } from "react";
 import { IoIosArrowUp } from "react-icons/io";
+import { useNavigate } from "react-router-dom";
 
 function Home() {
   const [plus, setPlus] = useState(0);
@@ -19,6 +20,8 @@ function Home() {
     }, 5000);
     return () => clearInterval(interval);
   }, []);
+
+  const navigate = useNavigate();
 
   const accordion = [
     {
@@ -41,14 +44,13 @@ function Home() {
     },
   ];
 
-  const [drop, setDrop] = useState(null)
+  const [drop, setDrop] = useState(null);
 
   const dropDown = (index) => {
     setDrop((prev) => (prev === index ? null : index));
   };
   return (
     <>
-
       <Hero />
 
       {/* ABOUT SECTION
@@ -289,7 +291,7 @@ function Home() {
               ensuring high nutritional value and great taste of both households
               and commercial use.
             </p>
-            <button>View Product</button>
+            <button onClick={() => navigate("/products")}>View Product</button>
           </div>
 
           <div className="product-card">
@@ -300,7 +302,7 @@ function Home() {
               providing high-quality meat that meets the needs of homes,
               restaurants, and businesses
             </p>
-            <button>View Product</button>
+            <button onClick={() => navigate("/products")}>View Product</button>
           </div>
 
           <div className="product-card">
@@ -311,7 +313,7 @@ function Home() {
               efficient egg production, giving you a reliable supply of quality
               eggs at all times.
             </p>
-            <button>View Product</button>
+            <button onClick={() => navigate("/products")}>View Product</button>
           </div>
         </div>
       </section>
@@ -321,14 +323,19 @@ function Home() {
         <h2>Why Choose Us</h2>
         {accordion.map((value, index) => (
           <div className="accord" key={index}>
-            <h3 onClick={()=> dropDown(index)}>
+            <h3 onClick={() => dropDown(index)}>
               {value.title}
               <span>
-                <IoIosArrowUp style={{transform: drop === index ? "rotate(180deg)" : "rotate(0deg)", transition: "0.3s"}}/>
+                <IoIosArrowUp
+                  style={{
+                    transform:
+                      drop === index ? "rotate(180deg)" : "rotate(0deg)",
+                    transition: "0.3s",
+                  }}
+                />
               </span>
             </h3>
-            { drop === index && <p>{value.content}</p> }
-            
+            {drop === index && <p>{value.content}</p>}
           </div>
         ))}
       </section>

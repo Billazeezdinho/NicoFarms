@@ -1,0 +1,115 @@
+/* PAGE */
+.values {
+  background: linear-gradient(to bottom, #fefce8, #ffffff);
+  padding: 60px 20px;
+}
+
+/* HEADER */
+.values-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.values-header h1 {
+  font-size: 40px;
+  color: #1f4d2b;
+}
+
+.values-header p {
+  color: #666;
+  margin-top: 10px;
+}
+
+/* GRID CONTAINER */
+.values-container {
+  max-width: 1100px;
+  margin: auto;
+}
+
+/* GRID */
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+/* CARD */
+.value-card {
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+  transition: 0.3s;
+}
+
+.value-card:hover {
+  transform: translateY(-5px);
+}
+
+.value-icon {
+  font-size: 40px;
+  margin-bottom: 15px;
+  display: inline-block;
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-12px);
+  }
+  60% {
+    transform: translateY(-6px);
+  }
+}
+
+/* TEXT */
+.value-card h3 {
+  color: #1f4d2b;
+  margin-bottom: 10px;
+}
+
+.value-card p {
+  color: #555;
+  line-height: 1.6;
+}
+
+/* COMMITMENT */
+.values-commitment {
+  margin-top: 60px;
+  background: #f0fdf4;
+  padding: 50px;
+  border-radius: 20px;
+  text-align: center;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.values-commitment h2 {
+  color: #1f4d2b;
+  margin-bottom: 15px;
+}
+
+.values-commitment p {
+  color: #555;
+  line-height: 1.7;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .values-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .values-commitment {
+    padding: 30px 20px;
+  }
+}

@@ -8,11 +8,11 @@ import {
 
 import Home from "../pages/home/Home";
 import About from "../pages/about/About";
-import Team from "../pages/Team";
+import Team from "../pages/corporate/Team";
 import Products from "../pages/products/Products";
 import Sustainability from "../pages/sustain/Sustainability";
-import Values from "../pages/Values";
-import Investors from "../pages/Investors";
+import Values from "../pages/ourValues/Values";
+import Investors from "../pages/workWithUs/Investors";
 import Contact from "../pages/getInTouch/Contact";
 import Homeroute from "../pages/Homeroute";
 
