@@ -5,6 +5,7 @@ import mdImage from "/IMG/md.jpeg";
 import legalImage from "/IMG/legal.jpeg";
 import financeImage from "/IMG/finance.jpeg";
 
+
 export const companyInfo = {
   name: "Nico Farms",
   tagline: "Fresh Eggs & Quality Poultry Raised Responsibly",
@@ -115,18 +116,18 @@ export const consultants = [
     ],
     about: `Ngozi Christiana Okonkwo is the Managing Director of Nico AgriFarms Limited, bringing with her a wealth of business experience, leadership and a strong entrepreneurial legacy.
 
-She is the driving force behind Nico Trucking Nigeria Limited, a venture specialising in the sale of trucks and heavy-duty equipment. Through this enterprise, she has built a reputation for operational excellence, strategic business development and delivering value within the logistics and equipment sector.
+    She is the driving force behind Nico Trucking Nigeria Limited, a venture specialising in the sale of trucks and heavy-duty equipment. Through this enterprise, she has built a reputation for operational excellence, strategic business development and delivering value within the logistics and equipment sector.
 
-At Nico AgriFarms, Ngozi leverages her extensive experience to strengthen operational structures, support strategic planning and drive the company towards achieving its performance targets. Her practical approach to business, combined with a strong focus on efficiency and accountability, has contributed significantly to the growth and stability of the organisation.
+    At Nico AgriFarms, Ngozi leverages her extensive experience to strengthen operational structures, support strategic planning and drive the company towards achieving its performance targets. Her practical approach to business, combined with a strong focus on efficiency and accountability, has contributed significantly to the growth and stability of the organisation.
 
-With a deep understanding of business operations and a commitment to excellence, she plays a key role in ensuring that Nico AgriFarms continues to operate professionally while positioning itself for long-term success and expansion.`,
+    With a deep understanding of business operations and a commitment to excellence, she plays a key role in ensuring that Nico AgriFarms continues to operate professionally while positioning itself for long-term success and expansion.`,
     image: mdImage,
   },
   {
     name: "Blessing Okonkwo, BA LLB LLM",
     role: "Legal and Compliance Advisor",
     company: "Nico AgriFarms Limited",
-    bio: "Blessing Okonkwo is a highly qualified legal professional with expertise in business law, compliance and regulatory matters. With qualifications including BA, LLB and LLM degrees, she provides essential legal guidance and ensures that Nico AgriFarms operates in full compliance with all applicable regulations.",
+    bio: "Blessing Okonkwo is a legally trained professional with a strong foundation in corporate and commercial law, regulatory compliance and legal risk management.",
     specialties: [
       "Business Law",
       "Compliance Management",
@@ -135,7 +136,13 @@ With a deep understanding of business operations and a commitment to excellence,
       "Legal Advisory Services",
       "Risk Management",
     ],
-    about: `Blessing Okonkwo serves as Legal and Compliance Advisor for Nico AgriFarms Limited, ensuring all operations align with Nigerian laws and international standards. Her legal expertise protects the company's interests while facilitating compliance with agricultural, environmental and business regulations. She provides strategic legal counsel on contracts, partnerships and corporate governance matters.`,
+    about: `Blessing Okonkwo is a legally trained professional with a strong foundation in corporate and commercial law, regulatory compliance and legal risk management.
+
+    She holds an LLM in Corporate and Commercial Law from Queen Mary University of London and an LLB from the University of Buckingham, and is currently completing the Bar Vocational Studies programme at City, St George’s University of London.
+
+    Blessing brings a practical and hands-on approach to legal and compliance matters, shaped by her experience across both public and private sector legal environments. In her advisory role at Nico AgriFarms, she supports the business in maintaining compliance across its operations, including commercial agreements, regulatory obligations, and risk management.
+
+    She is a member of the International Bar Association and an Associate of the Institute of Medical and Health Law. She is also actively engaged in pro bono and public interest legal work, reflecting her commitment to using the law as a tool for both commercial value and social impact.`,
     image: legalImage,
   },
   {
