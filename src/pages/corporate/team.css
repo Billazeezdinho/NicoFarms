@@ -61,7 +61,7 @@
 
 .nico-member-img {
   width: 100%;
-  height: 100%;
+  height:100%;
   object-fit: cover;
 }
 
@@ -297,7 +297,7 @@
   }
 
   .nico-image-box {
-    width: 280px;
+    width: 260px;
     height: 360px;
   }
 
