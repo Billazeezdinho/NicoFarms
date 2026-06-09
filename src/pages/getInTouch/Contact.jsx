@@ -98,13 +98,13 @@ const Contact = () => {
           <div className="info-card">
             <h3>Farm Location</h3>
             <p>
-              Igbessa, Ogun State, Nigeria <br />
+              Nico Farms Crescent, Ejila, Ado-Odo/Ota, Ogun State<br />
               Serving Ojo to Badagry (Lagos)
             </p>
           </div>
 
           <div className="info-card">
-            <h3>Office Address</h3>
+            <h3>Corporate Office</h3>
             <p>
               7 Austin Obiador Street <br />
               Ago Palace Way, Okota <br />

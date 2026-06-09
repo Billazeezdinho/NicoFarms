@@ -7,9 +7,9 @@ const Footer = () => {
       <div className="footer-container">
         {/* Brand */}
         <div className="footer-section">
-          <h3>NicoFarm</h3>
+          <h3>NicoFarms</h3>
           <p>
-            Sustainably produced poultry products serving communities across Ogun and Lagos State.
+            Where quality meets care.
           </p>
         </div>
 
@@ -27,8 +27,8 @@ const Footer = () => {
         {/* Contact */}
         <div className="footer-section">
           <h4>Location</h4>
-          <p><strong>Farm:</strong><br />Igbessa, Ogun State, Nigeria</p>
-          <p><strong>Office:</strong><br />7 Austin Obiador Street, Ago Palace Way, Okota, Isolo, Lagos</p>
+          <p><strong>Farm:</strong><br />Nico Farms Crescent, Ejila, Ado-Odo/Ota, Ogun State</p>
+          <p><strong>Corporate Office:</strong><br />7 Austin Obiador Street, Ago Palace Way, Okota, Isolo, Lagos</p>
         </div>
       </div>
 
