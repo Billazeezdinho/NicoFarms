@@ -3,7 +3,7 @@ import Hero from "../../components/hero/Hero";
 import Footer from "../../components/footer/Footer";
 // import ProductCard from "../components/ProductCard";
 // import SectionTitle from "../components/SectionTitle";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import "./home.css";
 import { useEffect, useState } from "react";
 import { IoIosArrowUp } from "react-icons/io";

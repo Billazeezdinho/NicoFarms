@@ -108,7 +108,6 @@ import "./about.css";
 const About = () => {
   return (
     <section className="about">
-      {/* HERO */}
       <div className="about-hero">
         <h1>About Us</h1>
         <p>Building a sustainable future through responsible farming</p>
@@ -136,9 +135,6 @@ const About = () => {
             across Nigeria.
           </p>
         </div>
-        <div className="about-image">
-          <img src="/images/farm1.jpg" alt="Our Story" />
-        </div>
       </div>
 
       {/* MISSION */}
@@ -154,7 +150,7 @@ const About = () => {
           </p>
         </div>
         <div className="about-image">
-          <img src="/images/farm2.jpg" alt="Mission" />
+          <img src="/IMG/Our_Mission.png" alt="Mission" />
         </div>
       </div>
 
@@ -169,9 +165,6 @@ const About = () => {
             business expansion, and sales of poultry meat and eggs across
             regions in Nigeria.
           </p>
-        </div>
-        <div className="about-image">
-          <img src="/images/farm3.jpg" alt="Vision" />
         </div>
       </div>
 
@@ -195,7 +188,7 @@ const About = () => {
           </p>
         </div>
         <div className="about-image">
-          <img src="/images/farm4.jpg" alt="Philosophy" />
+          <img src="/IMG/Our_Philosophy.png" alt="Philosophy" />
         </div>
       </div>
     </section>
