@@ -4,12 +4,12 @@
 
 /* HERO */
 .about-hero {
-  background:
-    linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url("/images/farm-bg.jpg") center/cover no-repeat;
+  background-image: url(../../../public/IMG/About_Hero.png);
+  background-size: cover;
+  background-position-y: -60px;
   color: white;
   text-align: center;
-  padding: 120px 0px;
+  padding: 170px 0px;
 }
 
 .about-hero h1 {
@@ -18,7 +18,8 @@
 }
 
 .about-hero p {
-  font-size: 18px;
+  font-size: 22px;
+  color: rgb(3, 104, 37);
 }
 
 .about-section {
@@ -101,6 +102,7 @@
 
 .about-image img {
   width: 100%;
+  margin-left: 20px;
   display: flex;
   border-radius: 15px;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);

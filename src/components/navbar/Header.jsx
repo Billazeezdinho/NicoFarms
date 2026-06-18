@@ -166,6 +166,10 @@ const Navbar = () => {
   const navigate = useNavigate();
   const location = useLocation();
 
+  const isActive = (path) => {
+  return location.pathname === path;
+};
+
   useEffect(() => {
       setShowSide(false)
   }, [location])
@@ -185,10 +189,10 @@ const Navbar = () => {
           <input type="text" className="input-con" placeholder="SEARCH" />
         </div>
         <div className="head-right">
-          <p>WHERE TO BUY</p>
-          <p onClick={() => navigate("/team")}>CORPORATE</p>
-          <p onClick={() => navigate("/investors")}>WORK WITH US</p>
-          <p onClick={() => navigate("/values")}>OUR VALUES</p>
+          <p className={isActive("/team") ? "active" : ""} onClick={() => navigate("/team")}>CORPORATE</p>
+          <p className={isActive("/investors") ? "active" : ""} onClick={() => navigate("/investors")}>WORK WITH US</p>
+          <p className={isActive("/values") ? "active" : ""} onClick={() => navigate("/values")}>OUR VALUES</p>
+          <p className={isActive("/privacy") ? "active" : ""} onClick={() => navigate("/privacy")}>PRIVACY POLICY</p>
         </div>
       </div>
       <div className="head-container">
@@ -196,12 +200,12 @@ const Navbar = () => {
           <img src="/IMG/Nico-LOgo.png" alt="" />
         </div>
         <div className="first-con">
-          <p onClick={() => navigate("/about")}>ABOUT</p>
-          <p onClick={() => navigate("/products")}>PRODUCTS</p>
+          <p className={isActive("/about") ? "active" : ""} onClick={() => navigate("/about")}>ABOUT</p>
+          <p className={isActive("/products") ? "active" : ""} onClick={() => navigate("/products")}>PRODUCTS</p>
         </div>
         <div className="last-con">
-          <p onClick={() => navigate("/sustainability")}>SUSTAINABILITY</p>
-          <p onClick={() => navigate("/contact")}>CONTACT</p>
+          <p className={isActive("/sustainability") ? "active" : ""} onClick={() => navigate("/sustainability")}>SUSTAINABILITY</p>
+          <p className={isActive("/contact") ? "active" : ""} onClick={() => navigate("/contact")}>CONTACT</p>
         </div>
         <span
           className={`burger ${showSide ? "active" : ""}`}

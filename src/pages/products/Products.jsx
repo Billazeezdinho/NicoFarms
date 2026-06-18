@@ -5,7 +5,7 @@ import "./products.css";
 function Products() {
   return (
     <>
-      <div className="about-hero">
+      <div className="Product-hero">
         <h1>Our Products</h1>
         <p>Quality poultry products from Nico Farms</p>
       </div>
@@ -15,7 +15,7 @@ function Products() {
           <section className="product-section">
             <div className="product-grid">
               <div className="product-image">
-                <img src="/api/placeholder/500/400" alt="Fresh Eggs" />
+                <img src="/IMG/Fresh_Eggs.png" alt="Fresh Eggs" />
               </div>
 
               <div className="product-text">
@@ -41,7 +41,7 @@ function Products() {
           <section className="product-section reverse">
             <div className="product-grid">
               <div className="product-image">
-                <img src="/api/placeholder/500/400" alt="Broiler Chickens" />
+                <img src="/IMG/Broiler_chicken.png" alt="Broiler Chickens" />
               </div>
 
               <div className="product-text">
@@ -66,7 +66,7 @@ function Products() {
           <section className="product-section">
             <div className="product-grid">
               <div className="product-image">
-                <img src="/api/placeholder/500/400" alt="Future Products" />
+                <img src="/IMG/Future_products.png" alt="Future Products" />
               </div>
 
               <div className="product-text">
