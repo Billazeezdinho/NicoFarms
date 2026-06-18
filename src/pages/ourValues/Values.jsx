@@ -5,31 +5,37 @@ const Values = () => {
     {
       title: "Quality",
       description:
-        "We are committed to delivering the highest quality poultry products through meticulous attention to every aspect of our farming process.",
+        "We are committed to delivering high-quality poultry products through proper nutrition, professional farm management, and consistent operational standards.",
       icon: "⭐",
     },
     {
       title: "Animal Welfare",
       description:
-        "The welfare of our animals comes first. We ensure proper care, nutrition, and living conditions for all our birds.",
+        "We believe healthy animals produce better outcomes. We prioritize the welfare, health, safety, and humane treatment of our birds at every stage of production.",
       icon: "🐔",
     },
     {
       title: "Sustainability",
       description:
-        "Our farming practices are designed to be environmentally responsible and economically viable for long-term success.",
+        "We are dedicated to sustainable farming practices that support environmental responsibility, efficient resource management, and long-term agricultural growth.",
       icon: "🌱",
     },
     {
       title: "Integrity",
       description:
-        "We conduct our business with honesty, transparency, and ethical practices in all our operations.",
+        "We conduct our business with honesty, accountability, professionalism, and transparency in all our relationships with customers, staff, suppliers, and stakeholders.",
       icon: "🤝",
     },
     {
       title: "Community Impact",
       description:
-        "We strive to make a positive difference in the communities we serve through employment, food security, and economic development.",
+        "We are committed to contributing positively to the communities we serve by supporting food accessibility, economic growth, and responsible business practices.",
+      icon: "🏘️",
+    },
+    {
+      title: "People & Staff Welfare",
+      description:
+        "We value the people behind our operations and are committed to creating a safe, respectful, and supportive working environment that promotes staff well-being, growth, and productivity.",
       icon: "🏘️",
     },
   ];

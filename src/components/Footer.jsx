@@ -13,7 +13,7 @@ function Footer() {
           <div className="md:col-span-1">
             <img src={logo} alt="Nico Farms Logo" className="h-12 mb-4" />
             <p className="text-green-100 text-sm leading-relaxed">
-              Sustainably produced poultry products serving communities across Ogun and Lagos State.
+              Where quality meets care.
             </p>
           </div>
 
@@ -32,8 +32,8 @@ function Footer() {
           <div>
             <h3 className="text-lg font-semibold mb-4">Location</h3>
             <div className="text-sm text-green-100 space-y-2">
-              <p><strong>Farm:</strong><br />Igbessa, Ogun State, Nigeria</p>
-              <p><strong>Office:</strong><br />7 Austin Obiador Street, Ago Palace Way, Okota, Isolo, Lagos</p>
+              <p><strong>Farm:</strong><br />Nico Farms Crescent, Ejila, Ado-Odo/Ota, Ogun State</p>
+              <p><strong>Corporate Office:</strong><br />7 Austin Obiador Street, Ago Palace Way, Okota, Isolo, Lagos</p>
             </div>
           </div>
 

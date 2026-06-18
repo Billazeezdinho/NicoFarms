@@ -39,11 +39,10 @@ const Team = () => {
 
                 {member.specialties && (
                   <div className="nico-spec-section">
-                    <h4>Core Expertise:</h4>
                     <ul className="nico-spec-grid">
                       {member.specialties.map((specialty, itemIndex) => (
                         <li key={itemIndex}>
-                          {"\u2713"} {specialty}
+                           {specialty}
                         </li>
                       ))}
                     </ul>

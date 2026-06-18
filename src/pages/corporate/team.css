@@ -50,8 +50,8 @@
 }
 
 .nico-image-box {
-  width: 380px;
-  height: 480px;
+  width: 180px;
+  height: 280px;
   border-radius: 30px 120px 30px 30px;
   overflow: hidden;
   position: relative;
@@ -109,12 +109,6 @@
   font-size: 1.1rem;
   margin-bottom: 2rem;
   white-space: pre-line;
-}
-
-.nico-spec-section h4 {
-  color: var(--nico-green);
-  margin-bottom: 1rem;
-  font-weight: 800;
 }
 
 .nico-spec-grid {

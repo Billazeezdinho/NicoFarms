@@ -31,7 +31,7 @@ function Home() {
     {
       title: "Responsible Farming Practices",
       content:
-        "Sustainability raised with care for animal welfare and the environment.",
+        "Sustainably raised with care for animal welfare, human well-being, and the environment.",
     },
     {
       title: "Healthy Birds & Nutritious Eggs",
@@ -69,9 +69,10 @@ function Home() {
             </h2>
             <p className="text-lg text-gray-700 leading-relaxed mb-6">
               Founded in 2020, Nico Farms is committed to responsible poultry
-              farming with a focus on quality products and animal welfare. We
-              believe in the power of farming done right, where the welfare of
-              our animals and the quality of our products always come first.
+              farming with a focus on quality products and animal welfare. We 
+              believe in the power of farming done right, where the welfare of 
+              our animals, members of staffs, and the quality of our products 
+              always come first.
             </p>
             <Link to="/about">
               <button className="px-6 py-3 bg-green-600 text-white rounded hover:bg-green-700 transition">
@@ -247,14 +248,15 @@ function Home() {
       </section> */}
 
       <div className="about-section">
-        <h1>About Nico Farmer</h1>
+        <h1>About Nico Farms </h1>
         <div className="con-text-img">
           <div className="con-text">
             <p>
               Founded in 2020, Nico Farms is committed to responsible poultry
-              farming with a focus on quality products and animal welfare. We
-              believe in the power of farming done right, where the welfare of
-              our animals and the quality of our products always come first.
+              farming with a focus on quality products and animal welfare. We 
+              believe in the power of farming done right, where the welfare of 
+              our animals, members of staffs, and the quality of our products 
+              always come first.
             </p>
             <button className="learn-butt">Learn more</button>
           </div>
@@ -287,8 +289,8 @@ function Home() {
             <img src="/IMG/About-2.jpg" alt="Eggs" />
             <h3>Fresh Eggs</h3>
             <p>
-              Our fresh eggs are produced daily under hygienic conditions,
-              ensuring high nutritional value and great taste of both households
+              Our fresh eggs are produced daily under hygienic conditions, 
+              ensuring high nutritional value and great taste for both households
               and commercial use.
             </p>
             <button onClick={() => navigate("/products")}>View Product</button>
