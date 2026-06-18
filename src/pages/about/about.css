@@ -110,6 +110,26 @@
 
 /* MOBILE */
 @media (max-width: 768px) {
+  .about-hero {
+  background-image: url(../../../public/IMG/About_Hero.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 0;
+  color: white;
+  text-align: center;
+  padding: 70px 0px;
+}
+
+.about-hero h1 {
+  font-size: 38px;
+  margin-bottom: 20px;
+}
+
+.about-hero p {
+  font-size: 18px;
+  color: rgb(3, 104, 37);
+}
+
   .about-section {
     flex-direction: column;
     padding: 40px 20px;
