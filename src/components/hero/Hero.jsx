@@ -70,6 +70,7 @@ import React, { useState } from "react";
 import "./hero.css";
 
 const Hero = () => {
+  // rygvubhijn
 
   return (
     <div className="herobg">
