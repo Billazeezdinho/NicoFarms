@@ -70,12 +70,13 @@ import React, { useState } from "react";
 import "./hero.css";
 
 const Hero = () => {
+  // rygvubhijn
 
   return (
     <div className="herobg">
       <div className="hero-overlay"></div>
       <div className="hero-text">
-        <h1>Farm Fresh Eggs & Quality Poultry You Can Trust</h1>
+        <h1>Fresh Eggs & Quality Poultry You Can Trust</h1>
         <div className="buttons">
           <button className="butt-tag">View Products</button>
           <button className="butt-secondary">Contact Us</button>
