@@ -14,13 +14,14 @@
 
 .nico-team-header {
   text-align: center;
-  margin-bottom: 7rem;
+  margin-bottom: 6rem; /* Clean rhythm scale */
 }
 
 .nico-main-title {
   font-size: 3.5rem;
   color: var(--nico-green);
   font-weight: 800;
+  margin: 0 0 1rem 0; /* Clear margin baseline */
 }
 
 .nico-title-underline {
@@ -31,37 +32,42 @@
   border-radius: 10px;
 }
 
+/* --- Premium Layout Stack --- */
 .nico-members-stack {
   display: flex;
   flex-direction: column;
-  gap: 8rem;
+  gap: 7rem; /* Uniform visual breathing room */
 }
 
 .nico-premium-card {
-  display: flex;
-  align-items: flex-start;
+  display: grid;
+  grid-template-columns: auto 1fr; /* Strict structural column alignment */
+  align-items: start;
   gap: 5rem;
-  padding: 2rem;
+  padding: 1rem 0;
 }
 
+/* Visual Frame Box with structured offsets */
 .nico-visual-frame {
   position: relative;
   flex-shrink: 0;
+  margin-top: 20px;   /* Counterbalances the absolute frame offset */
+  margin-right: 20px; /* Keeps layout tracking pristine */
 }
 
 .nico-image-box {
-  width: 180px;
-  height: 280px;
+  width: 240px; /* Enhanced sizing proportion for editorial balance */
+  height: 320px;
   border-radius: 30px 120px 30px 30px;
   overflow: hidden;
   position: relative;
   z-index: 2;
-  box-shadow: 0 30px 60px -12px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 24px 48px -12px rgba(0, 0, 0, 0.12);
 }
 
 .nico-member-img {
   width: 100%;
-  height:100%;
+  height: 100%;
   object-fit: cover;
 }
 
@@ -71,105 +77,131 @@
   right: -20px;
   width: 100%;
   height: 100%;
-  border: 5px solid var(--nico-orange);
+  border: 4px solid var(--nico-orange);
   border-radius: 30px 120px 30px 30px;
   z-index: 1;
 }
 
+/* --- Content Content Blocks --- */
 .nico-content-box {
-  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Keeps visual anchors locked left */
 }
 
 .nico-role-badge {
+  display: inline-block; /* Force structural block rendering */
   background: var(--nico-orange);
   color: white;
-  padding: 0.6rem 1.8rem;
+  padding: 0.5rem 1.5rem;
   border-radius: 50px;
   font-weight: 700;
-  font-size: 0.8rem;
+  font-size: 0.75rem;
   text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
 .nico-member-name {
-  font-size: 3rem;
+  font-size: 2.5rem;
   color: var(--nico-green);
   font-weight: 800;
-  margin: 1.5rem 0 0.5rem;
+  margin: 1rem 0 0.25rem 0;
+  line-height: 1.2;
 }
 
 .nico-company-tag {
   color: var(--nico-orange);
   font-weight: 700;
-  margin-bottom: 1.5rem;
+  font-size: 1rem;
+  margin: 0 0 1.5rem 0;
+}
+
+.nico-main-details {
+  width: 100%;
 }
 
 .nico-bio-text {
-  line-height: 1.8;
+  line-height: 1.7;
   color: var(--nico-text);
-  font-size: 1.1rem;
-  margin-bottom: 2rem;
+  font-size: 1.05rem;
+  margin: 0 0 1.5rem 0;
   white-space: pre-line;
+  max-width: 65ch; /* Stops text from stretching infinitely across wide screens */
+  text-align: left; /* Maintains editorial alignment for readability */
 }
 
+/* Specialties List Grid Layout */
 .nico-spec-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 0.8rem;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 0.75rem;
   list-style: none;
   padding: 0;
+  margin: 0 0 2rem 0;
 }
 
 .nico-spec-grid li {
   color: var(--nico-text);
-  font-size: 0.95rem;
-  font-weight: 500;
+  font-size: 0.9rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
 }
 
+.nico-spec-grid li::before {
+  content: "—";
+  color: var(--nico-orange);
+  margin-right: 0.5rem;
+  font-weight: 800;
+}
+
+/* Buttons and Links Actions */
 .nico-story-btn {
   background: var(--nico-green);
   color: white;
   border: none;
-  padding: 1rem 2.5rem;
+  padding: 0.9rem 2rem;
   border-radius: 8px;
   font-weight: 700;
+  font-size: 0.95rem;
   cursor: pointer;
-  transition: 0.3s;
-  margin-top: 2rem;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  margin-top: auto; /* Pushes action block perfectly down when container flexes */
 }
 
 .nico-story-btn:hover {
   background: var(--nico-orange);
-  transform: translateY(-3px);
+  transform: translateY(-2px);
 }
 
+/* --- High-End Modal System --- */
 .nico-modal-overlay {
   position: fixed;
   inset: 0;
-  background: rgba(0, 0, 0, 0.85);
-  backdrop-filter: blur(8px);
+  background: rgba(15, 49, 24, 0.85); /* Matched theme shade for cinematic overlay depth */
+  backdrop-filter: blur(12px);
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 1rem;
+  padding: 2rem;
   z-index: 9999;
 }
 
 .nico-modal-content {
-  width: min(1100px, 92vw);
-  height: min(760px, calc(100vh - 2rem));
+  width: min(1000px, 100%);
+  height: min(640px, 85vh);
   border-radius: 24px;
   position: relative;
   overflow: hidden;
   display: grid;
-  grid-template-columns: 40% 60%;
-  background: #0f3118;
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.35);
+  grid-template-columns: 42% 58%;
+  background: #0b2211;
+  box-shadow: 0 32px 64px rgba(0, 0, 0, 0.4);
 }
 
 .nico-modal-media {
   width: 100%;
   height: 100%;
-  background: #14351f;
   min-height: 0;
 }
 
@@ -177,138 +209,150 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center;
 }
 
 .nico-modal-details {
   height: 100%;
-  padding: 2.5rem 2.2rem 2rem;
+  padding: 3.5rem 3rem 3rem;
   color: white;
   display: flex;
   flex-direction: column;
   min-height: 0;
-  overflow: hidden;
 }
 
 .nico-close-modal {
   position: absolute;
-  top: 14px;
-  right: 18px;
-  font-size: 2.4rem;
-  background: none;
+  top: 1.5rem;
+  right: 1.5rem;
+  font-size: 2rem;
+  background: rgba(255, 255, 255, 0.1);
   border: none;
   color: white;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   cursor: pointer;
-  z-index: 2;
+  z-index: 10;
+  transition: background 0.2s;
+}
+
+.nico-close-modal:hover {
+  background: rgba(255, 255, 255, 0.2);
 }
 
 .modal-label {
   color: var(--nico-orange);
   text-transform: uppercase;
   letter-spacing: 2px;
+  font-size: 0.8rem;
   font-weight: 800;
 }
 
 .modal-title {
-  font-size: 2.1rem;
-  margin: 0.6rem 0 0.5rem;
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin: 0.5rem 0 0.25rem 0;
+  line-height: 1.1;
 }
 
 .modal-role {
-  font-size: 1rem;
-  font-weight: 700;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.8);
   margin: 0;
 }
 
 .modal-company {
-  margin: 0.4rem 0 1rem;
-  color: #ffcf9c;
-  font-weight: 600;
+  margin: 0.25rem 0 1.5rem 0;
+  color: var(--nico-orange);
+  font-weight: 700;
 }
 
 .modal-scroll-area {
-  margin-top: 0.8rem;
+  margin-top: 1rem;
   overflow-y: auto;
   flex: 1;
   min-height: 0;
-  padding-right: 0.9rem;
+  padding-right: 1rem;
 }
 
 .modal-about-text {
-  font-size: 1.02rem;
-  line-height: 1.8;
+  font-size: 1.05rem;
+  line-height: 1.75;
+  color: rgba(255, 255, 255, 0.9);
   white-space: pre-line;
-  margin: 0;
 }
 
 .modal-scroll-area::-webkit-scrollbar {
-  width: 6px;
+  width: 4px;
 }
 
 .modal-scroll-area::-webkit-scrollbar-thumb {
   background: var(--nico-orange);
-  border-radius: 10px;
+  border-radius: 4px;
 }
 
+/* --- Structural Breakpoints --- */
 @media (max-width: 1024px) {
   .nico-premium-card {
-    flex-direction: column;
-    text-align: center;
-    gap: 4rem;
+    grid-template-columns: 1fr;
+    gap: 3.5rem;
   }
 
   .nico-visual-frame {
-    margin: 0 auto;
+    margin: 20px auto 0 auto; /* Lock position to line up center stack metrics */
+  }
+
+  .nico-content-box {
+    align-items: center;
+    text-align: center;
   }
 
   .nico-spec-grid {
-    grid-template-columns: 1fr;
-    text-align: left;
+    justify-content: center;
+  }
+
+  .nico-spec-grid li {
+    justify-content: center;
+  }
+
+  .nico-spec-grid li::before {
+    display: none; /* Strip standard hyphen for centralized layout alignment */
   }
 
   .nico-modal-content {
     grid-template-columns: 1fr;
-    width: min(760px, 94vw);
-    height: min(860px, calc(100vh - 2rem));
+    height: 80vh;
+    width: min(560px, 100%);
   }
 
   .nico-modal-media {
-    height: 320px;
+    height: 240px;
   }
 
   .nico-modal-details {
-    padding: 1.5rem 1.2rem 1.2rem;
+    padding: 2rem;
   }
 }
 
 @media (max-width: 640px) {
   .nico-team-page {
-    padding: 4rem 1rem;
+    padding: 4rem 1.5rem;
   }
 
   .nico-main-title {
-    font-size: 2.2rem;
+    font-size: 2.5rem;
   }
 
   .nico-image-box {
-    width: 260px;
-    height: 360px;
+    width: 200px;
+    height: 280px;
   }
 
   .nico-member-name {
     font-size: 2rem;
-  }
-
-  .nico-modal-media {
-    height: 230px;
-  }
-
-  .modal-title {
-    font-size: 1.7rem;
-  }
-
-  .modal-about-text {
-    font-size: 0.98rem;
-    line-height: 1.7;
   }
 }
