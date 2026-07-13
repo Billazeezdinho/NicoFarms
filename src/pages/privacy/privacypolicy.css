@@ -13,7 +13,7 @@
   padding: 80px 8%;
   background:
     linear-gradient(rgba(0, 0, 0, 0.58), rgba(0, 0, 0, 0.58)),
-    url("src/assets/images/PRIVACY_POLICY_IMAGE.png") center/cover no-repeat;
+    url("../../assets/images/PRIVACY_POLICY_IMAGE.png") center/cover no-repeat;
 }
 
 .privacy-hero-content {
