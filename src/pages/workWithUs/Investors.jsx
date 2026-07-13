@@ -54,7 +54,7 @@ const Investors = () => {
       <section className="invest-section">
         <div className="invest-flex">
           <div className="invest-image">
-            <img src="/api/placeholder/500/400" alt="Growth Plan" />
+            <img src="src/assets/images/Growth_plan.png" alt="Growth Plan" />
           </div>
 
           <div className="invest-text">
