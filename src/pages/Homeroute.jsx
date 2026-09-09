@@ -1,6 +1,6 @@
 import Header from "../components/navbar/Header"
 import { Outlet, useLocation } from 'react-router-dom'
-import { AnimatePresence, motion } from "motion/react";
+import { AnimatePresence, motion as Motion } from "motion/react";
 import Footer from '../components/footer/Footer'
 
 const Homeroute = () => {
@@ -10,14 +10,14 @@ const Homeroute = () => {
     <>
     <Header/>
     <AnimatePresence mode="wait">
-      <motion.main
+      <Motion.main
         key={location.pathname}
         initial={{ opacity: 0, y: 40 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.65, ease: "easeOut" }}
       >
         <Outlet />
-      </motion.main>
+      </Motion.main>
     </AnimatePresence>
     <Footer />
     </>
