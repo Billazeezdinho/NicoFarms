@@ -4,7 +4,7 @@ import consultantImage from "/IMG/consultant.jpeg";
 import mdImage from "/IMG/md.jpeg";
 import legalImage from "/IMG/legal.jpeg";
 import financeImage from "/IMG/finance.jpeg";
-import manImage from "/IMG/manager.jpeg";
+import managerImage from "/IMG/manager.jpeg";
 
 
 export const companyInfo = {
@@ -222,6 +222,6 @@ Driven by a commitment to excellence, Dr. Abiola works to promote safe, healthy 
     As Farm Manager at Nico Agrifarms, Opeyemi oversees day-today farm operations, flock health and productivity, biosecurity, staff coordination and critical farm infrastructure.
     His experience spans poultry management from brooding through laying, vaccination programmes, preventive maintenance and the operation of essential farm equipment.
     He has played an important role in supporting the farm's expansion while maintaining high standards of flock welfare, egg quality and operational efficiency.`,
-    image: manImage,
+    image: managerImage,
   },
 ];
