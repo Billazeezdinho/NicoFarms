@@ -49,6 +49,10 @@
   }
 }
 
+.active {
+  color: rgb(254, 195, 35);
+}
+
 input::placeholder {
   color: rgb(128, 166, 160);
   font-size: 14px;

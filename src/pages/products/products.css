@@ -1,7 +1,16 @@
-/* PAGE BACKGROUND */
+PAGE BACKGROUND
 main {
   background: linear-gradient(to bottom, #fefce8, #ffffff);
   padding: 60px 20px;
+}
+
+.Product-hero {
+  background-image: url(../../../public/IMG/Product_Hero.png);
+  background-size: cover;
+  background-position-y: -40px;
+  color: white;
+  text-align: center;
+  padding: 170px 0px;
 }
 
 /* SECTION */
@@ -11,6 +20,20 @@ main {
   margin-bottom: 60px;
   border-radius: 20px;
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+}
+
+.Product-hero h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+.Product-hero p {
+  font-size: 22px;
+  color: white;
+}
+
+.container {
+  padding-top: 80px;
 }
 
 /* ALTERNATE BACKGROUND */
@@ -124,6 +147,25 @@ main {
 
 /* MOBILE */
 @media (max-width: 768px) {
+  .Product-hero {
+  background-image: url(../../../public/IMG/Product_Hero.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position-y: 0;
+  text-align: center;
+  padding: 70px 0px;
+}
+
+.Product-hero h1 {
+  font-size: 38px;
+  margin-bottom: 20px;
+}
+
+.Product-hero p {
+  font-size: 18px;
+  color: white;
+}
+  
   .product-grid {
     grid-template-columns: 1fr;
   }

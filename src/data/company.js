@@ -84,8 +84,8 @@ export const team = [
       "Sustainable Farming Practices"
     ],
     about: `Kenneth Geoffrey is the Founder and Chief Executive Officer of Nico AgriFarms Limited, an agribusiness established in 2020 with a vision to deliver high-quality poultry products while prioritising animal welfare, operational excellence and sustainable farming practices.
-
-An entrepreneur with a track record of building and supporting startups, Kenneth has been actively involved in the development of multiple ventures across agriculture, technology and the creative industry. He is also the Co-Founder of Yulo Technology, a fintech-focused startup and the Founder of Nightraven Entertainment, a production and talent management company dedicated to creating impactful and inspiring content.
+    
+    An entrepreneur with a track record of building and supporting startups, Kenneth has been actively involved in the development of multiple ventures across agriculture, technology and the creative industry. He is also the Co-Founder of Yulo Technology, a fintech-focused startup and the Founder of Nightraven Entertainment, a production and talent management company dedicated to creating impactful and inspiring content.
 
 Kenneth holds a Master's degree in Business with Business Analytics from Northumbria University London, equipping him with strong data-driven decision-making capabilities. He also holds a Diploma and a Bachelor's degree in Business Administration from the University of Lagos (UNILAG).
 
@@ -93,7 +93,12 @@ With a multidisciplinary approach to business, Kenneth combines strategic thinki
 
 Under his leadership, Nico AgriFarms continues to grow as a structured and forward-thinking agribusiness, with a focus on quality, efficiency and long-term impact.
 
-Kenneth is focused on building Nico AgriFarms into a scalable, investor-ready agribusiness that contributes meaningfully to Nigeria's food security and economic development.`,
+Kenneth is focused on building Nico AgriFarms into a scalable, investor-ready agribusiness that contributes meaningfully to Nigeria's food security and economic development.
+
+
+
+`,
+
     image: ceoImage,
   },
 ];
@@ -119,7 +124,11 @@ export const consultants = [
 
     At Nico AgriFarms, Ngozi leverages her extensive experience to strengthen operational structures, support strategic planning and drive the company towards achieving its performance targets. Her practical approach to business, combined with a strong focus on efficiency and accountability, has contributed significantly to the growth and stability of the organisation.
 
-    With a deep understanding of business operations and a commitment to excellence, she plays a key role in ensuring that Nico AgriFarms continues to operate professionally while positioning itself for long-term success and expansion.`,
+    With a deep understanding of business operations and a commitment to excellence, she plays a key role in ensuring that Nico AgriFarms continues to operate professionally while positioning itself for long-term success and expansion.
+    
+    
+    
+    `,
     image: mdImage,
   },
   {
@@ -140,7 +149,11 @@ export const consultants = [
 
     Blessing brings a practical and hands-on approach to legal and compliance matters, shaped by her experience across both public and private sector legal environments. In her advisory role at Nico AgriFarms, she supports the business in maintaining compliance across its operations, including commercial agreements, regulatory obligations, and risk management.
 
-    She is a member of the International Bar Association and an Associate of the Institute of Medical and Health Law. She is also actively engaged in pro bono and public interest legal work, reflecting her commitment to using the law as a tool for both commercial value and social impact.`,
+    She is a member of the International Bar Association and an Associate of the Institute of Medical and Health Law. She is also actively engaged in pro bono and public interest legal work, reflecting her commitment to using the law as a tool for both commercial value and social impact.
+    
+    
+    
+    `,
     image: legalImage,
   },
   {
@@ -161,7 +174,11 @@ She specialises in building structured accounting systems, strengthening interna
 
 Chinaza holds a Second Class Upper degree from Imo State University and is currently a student member of the Institute of Chartered Accountants of Nigeria (ICAN), reflecting her strong commitment to continuous professional development and high ethical standards.
 
-With a keen eye for detail and a practical approach to financial management, she works closely with Nico AgriFarms to develop efficient and reliable financial processes that support long-term growth and operational stability.`,
+With a keen eye for detail and a practical approach to financial management, she works closely with Nico AgriFarms to develop efficient and reliable financial processes that support long-term growth and operational stability.
+
+
+
+`,
     image: financeImage,
   },
   {
@@ -182,7 +199,11 @@ He is the founder of Golden Farm Care, an enterprise dedicated to delivering pro
 
 At Nico AgriFarms, Dr. Abiola provides expert guidance on nutrition, biosecurity and overall farm health management, ensuring that the farm maintains high standards in animal welfare and product quality. His hands-on approach supports the development of efficient feeding systems, disease control strategies and best practices in poultry care.
 
-Driven by a commitment to excellence, Dr. Abiola works to promote safe, healthy poultry production while supporting the growth of sustainable farming systems. His work continues to contribute to improved farm outcomes through professionalism, innovation and quality-driven management.`,
+Driven by a commitment to excellence, Dr. Abiola works to promote safe, healthy poultry production while supporting the growth of sustainable farming systems. His work continues to contribute to improved farm outcomes through professionalism, innovation and quality-driven management.
+
+
+
+`,
     image: consultantImage,
   },
   {
