@@ -1,314 +1,521 @@
 :root {
-  --nico-green: #1a5d1a;
-  --nico-orange: #f97316;
-  --nico-white: #ffffff;
-  --nico-text: #374151;
+  --clr-primary: #114211;
+  --clr-primary-light: #f0f7f0;
+  --clr-accent: #ea580c;
+  --clr-accent-light: #fff7ed;
+  --clr-text-main: #1f2937;
+  --clr-text-muted: #6b7280;
+  --clr-bg-main: #fafafa;
+  --clr-card-bg: #ffffff;
+  
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.05);
+  --shadow-lg: 0 25px 50px -12px rgba(0, 0, 0, 0.15);
+  
+  --radius-sm: 8px;
+  --radius-md: 16px;
+  --radius-lg: 24px;
+  --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.nico-team-page {
-  padding: 6rem 2rem;
-  max-width: 1200px;
+.team-container {
+  font-family: system-ui, -apple-system, sans-serif;
+  padding: 5rem 1.5rem;
+  max-width: 1280px;
   margin: 0 auto;
-  background: var(--nico-white);
+  background: var(--clr-bg-main);
+  color: var(--clr-text-main);
 }
 
-.nico-team-header {
+/* --- Header Section --- */
+.team-header {
   text-align: center;
-  margin-bottom: 7rem;
+  max-width: 600px;
+  margin: 0 auto 4rem;
 }
 
-.nico-main-title {
-  font-size: 3.5rem;
-  color: var(--nico-green);
+.team-subtitle {
+  color: var(--clr-accent);
+  font-weight: 600;
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.team-title {
+  font-size: 2.5rem;
+  color: var(--clr-primary);
   font-weight: 800;
+  letter-spacing: -0.03em;
+  margin: 0.5rem 0 1rem;
 }
 
-.nico-title-underline {
-  width: 80px;
-  height: 5px;
-  background: var(--nico-orange);
-  margin: 0 auto;
-  border-radius: 10px;
+.team-description {
+  color: var(--clr-text-muted);
+  font-size: 1.05rem;
+  line-height: 1.6;
 }
 
-.nico-members-stack {
+/* --- Main Responsive Grid --- */
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(310px, 1fr));
+  gap: 2rem;
+}
+
+/* --- Profile Cards --- */
+.team-card {
+  background: var(--clr-card-bg);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  overflow: hidden;
   display: flex;
   flex-direction: column;
-  gap: 8rem;
+  transition: var(--transition);
+  border: 1px solid rgba(0, 0, 0, 0.04);
 }
 
-.nico-premium-card {
-  display: flex;
-  align-items: flex-start;
-  gap: 5rem;
-  padding: 2rem;
+.team-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-md);
 }
 
-.nico-visual-frame {
+.card-image-wrapper {
   position: relative;
-  flex-shrink: 0;
-}
-
-.nico-image-box {
-  width: 180px;
-  height: 280px;
-  border-radius: 30px 120px 30px 30px;
-  overflow: hidden;
-  position: relative;
-  z-index: 2;
-  box-shadow: 0 30px 60px -12px rgba(0, 0, 0, 0.15);
-}
-
-.nico-member-img {
   width: 100%;
-  height:100%;
-  object-fit: cover;
+  padding-top: 105%; 
+  overflow: hidden;
+  background-color: var(--clr-primary-light);
 }
 
-.nico-orange-frame-accent {
+.card-image {
   position: absolute;
-  top: -20px;
-  right: -20px;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
-  border: 5px solid var(--nico-orange);
-  border-radius: 30px 120px 30px 30px;
-  z-index: 1;
+  object-fit: cover;
+  transition: var(--transition);
 }
 
-.nico-content-box {
+.team-card:hover .card-image {
+  transform: scale(1.03);
+}
+
+.card-badge {
+  position: absolute;
+  bottom: 1rem;
+  left: 1rem;
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(8px);
+  color: var(--clr-primary);
+  padding: 0.4rem 0.85rem;
+  border-radius: var(--radius-sm);
+  font-weight: 600;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  box-shadow: var(--shadow-sm);
+}
+
+.card-content {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
   flex: 1;
 }
 
-.nico-role-badge {
-  background: var(--nico-orange);
-  color: white;
-  padding: 0.6rem 1.8rem;
-  border-radius: 50px;
+.card-name {
+  font-size: 1.25rem;
+  color: var(--clr-primary);
   font-weight: 700;
-  font-size: 0.8rem;
-  text-transform: uppercase;
+  margin: 0;
 }
 
-.nico-member-name {
-  font-size: 3rem;
-  color: var(--nico-green);
-  font-weight: 800;
-  margin: 1.5rem 0 0.5rem;
+.card-company {
+  color: var(--clr-accent);
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin: 0.2rem 0 0;
 }
 
-.nico-company-tag {
-  color: var(--nico-orange);
-  font-weight: 700;
-  margin-bottom: 1.5rem;
+.card-bio {
+  color: var(--clr-text-muted);
+  font-size: 0.92rem;
+  line-height: 1.6;
+  margin: 1rem 0 1.5rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
-.nico-bio-text {
-  line-height: 1.8;
-  color: var(--nico-text);
-  font-size: 1.1rem;
-  margin-bottom: 2rem;
-  white-space: pre-line;
+.card-specialties {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: auto;
+  margin-bottom: 1.25rem;
 }
 
-.nico-spec-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 0.8rem;
-  list-style: none;
-  padding: 0;
-}
-
-.nico-spec-grid li {
-  color: var(--nico-text);
-  font-size: 0.95rem;
+.specialty-tag {
+  background: var(--clr-primary-light);
+  color: var(--clr-primary);
+  font-size: 0.75rem;
   font-weight: 500;
+  padding: 0.25rem 0.65rem;
+  border-radius: 50px;
 }
 
-.nico-story-btn {
-  background: var(--nico-green);
-  color: white;
+.card-action-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  color: var(--clr-primary);
   border: none;
-  padding: 1rem 2.5rem;
-  border-radius: 8px;
-  font-weight: 700;
+  background: var(--clr-primary-light);
+  padding: 0.8rem 1.25rem;
+  border-radius: var(--radius-sm);
+  font-weight: 600;
+  font-size: 0.875rem;
   cursor: pointer;
-  transition: 0.3s;
-  margin-top: 2rem;
+  transition: var(--transition);
+  width: 100%;
 }
 
-.nico-story-btn:hover {
-  background: var(--nico-orange);
-  transform: translateY(-3px);
+.btn-arrow {
+  width: 16px;
+  height: 16px;
+  transition: var(--transition);
 }
 
-.nico-modal-overlay {
+.card-action-btn:hover {
+  background: var(--clr-primary);
+  color: #ffffff;
+}
+
+.card-action-btn:hover .btn-arrow {
+  transform: translateX(4px);
+}
+
+/* --- Premium Dialog/Modal Design --- */
+.modal-overlay {
   position: fixed;
   inset: 0;
-  background: rgba(0, 0, 0, 0.85);
-  backdrop-filter: blur(8px);
+  background: rgba(15, 23, 42, 0.45);
+  backdrop-filter: blur(12px);
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 1rem;
-  z-index: 9999;
+  padding: 1.25rem;
+  z-index: 1000;
+  animation: fadeIn 0.25s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.nico-modal-content {
-  width: min(1100px, 92vw);
-  height: min(760px, calc(100vh - 2rem));
-  border-radius: 24px;
+.modal-wrapper {
+  background: var(--clr-card-bg);
+  width: min(940px, 100%);
+  height: 600px;
+  max-height: calc(90vh - 2rem);
+  border-radius: var(--radius-lg);
   position: relative;
   overflow: hidden;
+  box-shadow: var(--shadow-lg);
+  animation: scaleIn 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.modal-close-btn {
+  position: absolute;
+  top: 1.25rem;
+  right: 1.25rem;
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(4px);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  color: var(--clr-text-main);
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 20;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--transition);
+}
+
+.modal-close-btn svg {
+  width: 16px;
+  height: 16px;
+}
+
+.modal-close-btn:hover {
+  background: var(--clr-accent-light);
+  color: var(--clr-accent);
+  transform: scale(1.05);
+}
+
+.modal-layout {
   display: grid;
   grid-template-columns: 40% 60%;
-  background: #0f3118;
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.35);
-}
-
-.nico-modal-media {
-  width: 100%;
   height: 100%;
-  background: #14351f;
-  min-height: 0;
 }
 
-.nico-modal-image {
+.modal-hero {
+  position: relative;
+  height: 100%;
+  background: var(--clr-primary-light);
+}
+
+.modal-image {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center;
 }
 
-.nico-modal-details {
-  height: 100%;
-  padding: 2.5rem 2.2rem 2rem;
-  color: white;
+.modal-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(17,66,17, 0.1), transparent);
+}
+
+.modal-body {
+  padding: 3rem 2.5rem;
   display: flex;
   flex-direction: column;
-  min-height: 0;
-  overflow: hidden;
+  overflow: hidden; /* Lock parent view */
 }
 
-.nico-close-modal {
-  position: absolute;
-  top: 14px;
-  right: 18px;
-  font-size: 2.4rem;
-  background: none;
-  border: none;
-  color: white;
-  cursor: pointer;
-  z-index: 2;
+.modal-header {
+  margin-bottom: 1.5rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+  padding-bottom: 1.25rem;
 }
 
-.modal-label {
-  color: var(--nico-orange);
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  font-weight: 800;
-}
-
-.modal-title {
-  font-size: 2.1rem;
-  margin: 0.6rem 0 0.5rem;
-}
-
-.modal-role {
-  font-size: 1rem;
+.modal-tag {
+  color: var(--clr-accent);
+  font-size: 0.75rem;
   font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.modal-name {
+  font-size: 2rem;
+  color: var(--clr-primary);
+  margin: 0.25rem 0;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+
+.modal-subtext {
+  color: var(--clr-text-muted);
+  font-size: 0.95rem;
+  font-weight: 500;
   margin: 0;
 }
 
-.modal-company {
-  margin: 0.4rem 0 1rem;
-  color: #ffcf9c;
-  font-weight: 600;
-}
-
-.modal-scroll-area {
-  margin-top: 0.8rem;
+.modal-scroll-container {
   overflow-y: auto;
+  padding-right: 0.75rem;
   flex: 1;
-  min-height: 0;
-  padding-right: 0.9rem;
 }
 
-.modal-about-text {
-  font-size: 1.02rem;
-  line-height: 1.8;
-  white-space: pre-line;
-  margin: 0;
+.modal-scroll-container::-webkit-scrollbar {
+  width: 5px;
 }
 
-.modal-scroll-area::-webkit-scrollbar {
-  width: 6px;
-}
-
-.modal-scroll-area::-webkit-scrollbar-thumb {
-  background: var(--nico-orange);
+.modal-scroll-container::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.15);
   border-radius: 10px;
 }
 
-@media (max-width: 1024px) {
-  .nico-premium-card {
-    flex-direction: column;
-    text-align: center;
-    gap: 4rem;
-  }
+.modal-section-title {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--clr-text-muted);
+  margin: 0 0 0.5rem 0;
+}
 
-  .nico-visual-frame {
-    margin: 0 auto;
-  }
+.modal-bio-section {
+  margin-bottom: 2rem;
+}
 
-  .nico-spec-grid {
+.modal-bio {
+  font-size: 0.975rem;
+  line-height: 1.7;
+  color: #374151;
+  white-space: pre-line;
+  margin: 0;
+  padding-right: 1rem;
+}
+
+.modal-specialties-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.modal-specialty-tag {
+  background: var(--clr-bg-main);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  color: var(--clr-text-main);
+  font-size: 0.8rem;
+  font-weight: 500;
+  padding: 0.35rem 0.8rem;
+  border-radius: var(--radius-sm);
+}
+
+/* --- Animations --- */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+@keyframes scaleIn {
+  from { transform: scale(0.96); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+/* --- Media Queries (Mobile Responsiveness) --- */
+@media (max-width: 960px) {
+  .modal-wrapper {
+    height: auto;
+    max-height: 85vh;
+  }
+  
+  .modal-layout {
     grid-template-columns: 1fr;
-    text-align: left;
+  }
+  
+  .modal-hero {
+    height: 240px;
+  }
+  
+  .modal-body {
+    padding: 2rem 1.75rem;
+    overflow: visible;
   }
 
-  .nico-modal-content {
-    grid-template-columns: 1fr;
-    width: min(760px, 94vw);
-    height: min(860px, calc(100vh - 2rem));
-  }
-
-  .nico-modal-media {
-    height: 320px;
-  }
-
-  .nico-modal-details {
-    padding: 1.5rem 1.2rem 1.2rem;
+  .modal-scroll-container {
+    overflow: visible;
+    padding-right: 0;
   }
 }
 
 @media (max-width: 640px) {
-  .nico-team-page {
-    padding: 4rem 1rem;
+  .team-container {
+    padding: 3.5rem 1.25rem;
   }
-
-  .nico-main-title {
-    font-size: 2.2rem;
-  }
-
-  .nico-image-box {
-    width: 260px;
-    height: 360px;
-  }
-
-  .nico-member-name {
+  
+  .team-title {
     font-size: 2rem;
   }
-
-  .nico-modal-media {
-    height: 230px;
+  
+  .team-grid {
+    grid-template-columns: 1fr; /* Rigid clean stack on base smartphones */
+    gap: 1.5rem;
   }
 
-  .modal-title {
-    font-size: 1.7rem;
+  .modal-wrapper {
+    max-height: 90vh;
   }
 
-  .modal-about-text {
-    font-size: 0.98rem;
-    line-height: 1.7;
+  .modal-name {
+    font-size: 1.6rem;
+  }
+}
+
+
+/* --- Optimized Mobile Responsiveness with Larger Image Focus --- */
+
+@media (max-width: 960px) {
+  .modal-wrapper {
+    /* Set to take up the full available modal area */
+    height: auto;
+    max-height: 85vh;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .modal-layout {
+    display: flex;
+    flex-direction: column;
+    /* Move scrollbar control to the main wrapper on mobile */
+    overflow-y: auto; 
+    max-height: 100%;
+    -webkit-overflow-scrolling: touch; /* For smooth iOS inertia scrolling */
+  }
+  
+  .modal-hero {
+    /* INCREASED HEIGHT: Dominant header image */
+    height: 400px; /* Was previously 280px */
+    width: 100%;
+    flex-shrink: 0;
+    position: relative;
+    border-bottom: 2px solid var(--clr-bg-main); /* Subtle edge separation */
+  }
+  
+  .modal-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* Centers the subject, prioritizes the face in cover mode */
+    object-position: center 20%; 
+  }
+
+  /* Moves close button clearly into view above the image area */
+  .modal-close-btn {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    z-index: 25; /* Ensures it floats above the new gradient/image layer */
+  }
+  
+  .modal-body {
+    padding: 2rem 1.75rem;
+    overflow: visible; /* Prevents text cutting off mid-sentence */
+    height: auto;
+  }
+
+  .modal-scroll-container {
+    overflow: visible; /* Allow parent container to handle the layout scroll */
+    padding-right: 0;
+  }
+}
+
+@media (max-width: 640px) {
+  .team-container {
+    padding: 3.5rem 1.25rem;
+  }
+  
+  .team-title {
+    font-size: 2rem;
+  }
+  
+  .team-grid {
+    grid-template-columns: 1fr; /* Clean, simple column on smartphone */
+    gap: 1.75rem;
+  }
+
+  .modal-wrapper {
+    max-height: 92vh; /* Use slightly more space on smaller phones */
+    width: 100%;
+    border-radius: var(--radius-md);
+  }
+
+  .modal-hero {
+    /* RELATIVE INCREASE: Balanced height for small phones */
+    height: 320px; /* Was previously 220px */
+  }
+
+  .modal-body {
+    padding: 1.75rem 1.25rem;
+  }
+
+  .modal-name {
+    font-size: 1.6rem;
   }
 }

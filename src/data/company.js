@@ -4,6 +4,7 @@ import consultantImage from "/IMG/consultant.jpeg";
 import mdImage from "/IMG/md.jpeg";
 import legalImage from "/IMG/legal.jpeg";
 import financeImage from "/IMG/finance.jpeg";
+import managerImage from "/IMG/manager.jpeg";
 
 
 export const companyInfo = {
@@ -204,5 +205,23 @@ Driven by a commitment to excellence, Dr. Abiola works to promote safe, healthy 
 
 `,
     image: consultantImage,
+  },
+  {
+    name: "Opeyemi Yusuf Olatunbosun",
+    role: "Farm Manager",
+    bio: "Opeyemi Yusuf Olatunbosun is an experienced poultry operations professional with strong technical background in electrical and mechanical engineering. With over a decade of combined experience in poultry production, farm operations and equipment maintenance.",
+    specialties: [
+       "Poultry Production Operations",
+    "Flock Health & Brooding Management",
+    "Infrastructure Maintenance & Automation",
+    "Biosecurity Protocols Implementation",
+    "Staff Coordination & Resource Allocation",
+    "Equipment Engineering Diagnostics",
+    ],
+    about: `Opeyemi Yusuf Olatunbosun is an experienced poultry operations professional with strong technical background in electrical and mechanical engineering. With over a decade of combined experience in poultry production, farm operations and equipment maintenance, he brings a practical and multidisciplinary approach to farm management.
+    As Farm Manager at Nico Agrifarms, Opeyemi oversees day-today farm operations, flock health and productivity, biosecurity, staff coordination and critical farm infrastructure.
+    His experience spans poultry management from brooding through laying, vaccination programmes, preventive maintenance and the operation of essential farm equipment.
+    He has played an important role in supporting the farm's expansion while maintaining high standards of flock welfare, egg quality and operational efficiency.`,
+    image: managerImage,
   },
 ];
