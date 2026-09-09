@@ -10,6 +10,7 @@ import Investors from "../pages/workWithUs/Investors";
 import Contact from "../pages/getInTouch/Contact";
 import Homeroute from "../pages/Homeroute";
 import ScrollToTop from "./scrollToTop";
+import Privacy from "../pages/privacy/Privacy";
 
 function AppRoutes() {
   const router = createBrowserRouter([
@@ -39,6 +40,10 @@ function AppRoutes() {
             {
               path: "/sustainability",
               element: <Sustainability />,
+            },
+            {
+              path: "/privacy",
+              element: <Privacy />,
             },
             {
               path: "/values",

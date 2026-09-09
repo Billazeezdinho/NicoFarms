@@ -66,10 +66,11 @@
 
 // export default Hero;
 
-import React, { useState } from "react";
 import "./hero.css";
+import { useNavigate } from "react-router-dom";
 
 const Hero = () => {
+  const navigate = useNavigate();
 
   return (
     <div className="herobg">
@@ -77,8 +78,12 @@ const Hero = () => {
       <div className="hero-text">
         <h1>Farm Fresh Eggs & Quality Poultry You Can Trust</h1>
         <div className="buttons">
-          <button className="butt-tag">View Products</button>
-          <button className="butt-secondary">Contact Us</button>
+          <button className="butt-tag" onClick={() => navigate("/products")}>
+            View Products
+          </button>
+          <button className="butt-secondary" onClick={() => navigate("/contact")}>
+            Contact Us
+          </button>
         </div>
       </div>
     </div>

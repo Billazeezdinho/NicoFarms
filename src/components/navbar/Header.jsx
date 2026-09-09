@@ -14,16 +14,17 @@ const Navbar = () => {
   };
 
   useEffect(() => {
-    setShowSide(false);
-  }, [location]);
-
-  useEffect(() => {
     if (showSide) {
       document.body.style.overflow = "hidden";
     } else {
       document.body.style.overflow = "auto";
     }
   }, [showSide]);
+
+  const handleNavigate = (path) => {
+    setShowSide(false);
+    navigate(path);
+  };
   return (
     <>
       <div className="top-head">
@@ -59,19 +60,19 @@ const Navbar = () => {
         </div>
       </div>
       <div className="head-container">
-        <div className="logo-container" onClick={() => navigate("/")}>
+        <div className="logo-container" onClick={() => handleNavigate("/")}>
           <img src="/IMG/Nico-LOgo.png" alt="" />
         </div>
         <div className="first-con">
           <p
             className={isActive("/about") ? "active" : ""}
-            onClick={() => navigate("/about")}
+            onClick={() => handleNavigate("/about")}
           >
             ABOUT
           </p>
           <p
             className={isActive("/products") ? "active" : ""}
-            onClick={() => navigate("/products")}
+            onClick={() => handleNavigate("/products")}
           >
             PRODUCTS
           </p>
@@ -79,13 +80,13 @@ const Navbar = () => {
         <div className="last-con">
           <p
             className={isActive("/sustainability") ? "active" : ""}
-            onClick={() => navigate("/sustainability")}
+            onClick={() => handleNavigate("/sustainability")}
           >
             SUSTAINABILITY
           </p>
           <p
             className={isActive("/contact") ? "active" : ""}
-            onClick={() => navigate("/contact")}
+            onClick={() => handleNavigate("/contact")}
           >
             CONTACT
           </p>
@@ -101,10 +102,10 @@ const Navbar = () => {
       </div>
       <div className={`sideBar ${showSide ? "active" : ""}`}>
         <div className="nav-items">
-          <p onClick={() => navigate("/about")}>ABOUT</p>
-          <p onClick={() => navigate("/products")}>PRODUCTS</p>
-          <p onClick={() => navigate("/sustainability")}>SUSTAINABILITY</p>
-          <p onClick={() => navigate("/contact")}>CONTACT</p>
+          <p onClick={() => handleNavigate("/about")}>ABOUT</p>
+          <p onClick={() => handleNavigate("/products")}>PRODUCTS</p>
+          <p onClick={() => handleNavigate("/sustainability")}>SUSTAINABILITY</p>
+          <p onClick={() => handleNavigate("/contact")}>CONTACT</p>
         </div>
         <button>DONATE</button>
       </div>
